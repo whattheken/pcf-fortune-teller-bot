@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple rails app that manages fortunes. Used to test out Pivotal Cloud Foundary's Pivotal Web Services.
 
-Things you may want to cover:
+This app contains:
+* CRUD operations for adding fortunes
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* An API that allows a GET request for a random fortune
