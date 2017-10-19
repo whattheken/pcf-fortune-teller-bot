@@ -1,0 +1,14 @@
+<h1>Fortune <%= @fortune.id %></h1>
+
+<p>
+<strong>Author:</strong>
+<%= @fortune.author %>
+</p>
+
+<p>
+<strong>Text:</strong>
+<%= @fortune.text %>
+</p>
+
+<%= link_to "Edit this fortune", edit_fortune_path(@fortune) %>
+<%= link_to 'See all fortunes', fortunes_path %>

@@ -1,0 +1,32 @@
+<h1>Edit fortune</h1>
+
+<%= form_with(model: @fortune) do |form| %>
+
+  <% if @fortune.errors.any? %>
+    <div id="error_explanation">
+      <h2>Error</h2>
+      <ul>
+        <% @fortune.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'See all fortunes', fortunes_path %>

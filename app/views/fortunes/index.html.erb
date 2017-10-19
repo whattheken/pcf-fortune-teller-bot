@@ -1,0 +1,22 @@
+<h1>List of all fortunes</h1>
+
+<table>
+<tr>
+  <th>Id</th>
+  <th>Author</th>
+  <th>Text</th>
+</tr>
+
+<% @fortunes.each do |fortune| %>
+  <tr>
+    <td><%= fortune.id %></td>
+    <td><%= fortune.author %></td>
+    <td><%= fortune.text %></td>
+    <td><%= link_to 'Show', fortune_path(fortune) %></td>
+    <td><%= link_to 'Edit', edit_fortune_path(fortune) %></td>
+    <td><%= link_to 'Delete', fortune_path(fortune), method: :delete, data: { confirm: 'Delete fortune?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Add new fortune', new_fortune_path %>

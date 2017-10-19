@@ -1,0 +1,30 @@
+<h1>Add a new fortune</h1>
+
+<%= form_with scope: :fortune, url: fortunes_path, local: true do |form| %>
+  <% if @fortune.errors.any? %>
+    <div>
+      <h2>Error!</h2>
+      <ul>
+        <% @fortune.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'See all fortunes', fortunes_path %>

@@ -1,0 +1,8 @@
+---
+applications:
+- name: fortune-teller-bot
+  command: rails db:migrate && rails server
+  memory: 128M
+  instances: 2
+  services:
+    - fortune-teller-bot-db
